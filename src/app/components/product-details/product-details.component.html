@@ -1,0 +1,15 @@
+<button routerLink="/productCart">Go to Cart</button>
+<br>
+<br>
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-md-3">
+      <img src={{product.thumbnail}} alt="" width="20%" height="25%"><br>
+      {{product.description}} <br>
+      {{product.rating}}&nbsp;&nbsp;&nbsp;({{product.stock}}) <br>
+      {{product.price | currency}}&nbsp;&nbsp;&nbsp;
+      {{product.discountPercentage}} % <br>
+      <button (click)="addtoCart()">{{isProductAdded ? 'Remove from cart':'Add to Cart'}}</button>
+    </div>
+  </div>
+</div>

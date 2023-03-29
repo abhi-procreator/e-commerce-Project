@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-md-3">
+      <!-- <div *ngFor="let data of productArray">
+                <a><img src="{{data.thumbnail}}" alt="" width="20%" height="25%"></a><br>
+                {{data.description}} <br>
+                {{data.rating}}&nbsp;&nbsp;&nbsp;({{data.stock}}) <br>
+                {{data.price | currency}}&nbsp;&nbsp;&nbsp;
+                {{data.discountPercentage}} % <br>
+              </div> -->
+
+      <!-- <div *ngFor="let data of productArray">
+                <a><img src="{{data.thumbnail}}" alt="" width="20%" height="25%"></a><br>
+                {{data.description}} <br>
+                {{data.rating}}&nbsp;&nbsp;&nbsp;({{data.stock}}) <br>
+                {{data.price | currency}}&nbsp;&nbsp;&nbsp;
+                {{data.discountPercentage}} % <br>
+              </div>-->
+
+      <div *ngFor="let data of productArray">
+        <a><img src="{{data.thumbnail}}" alt="" width="20%" height="25%"></a><br>
+        {{data.description}} <br>
+        {{data.rating}}&nbsp;&nbsp;&nbsp;({{data.stock}}) <br>
+        {{data.price | currency}}&nbsp;&nbsp;&nbsp;
+        {{data.discountPercentage}} % <br>
+      </div>
+    </div>
+  </div>
+</div>
