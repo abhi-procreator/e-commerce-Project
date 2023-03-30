@@ -7,8 +7,9 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductsService } from './service/products.service';
-import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button'
+
 
 
 
@@ -25,7 +26,8 @@ import { ButtonModule } from 'primeng/button';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ButtonModule    
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+h3,
+.description,
+.discount,
+.price,
+.rating,
+.category,
+.brand {
+    margin-left: 5px;
+}
+
+.stock {
+    margin-left: 25px;
+}

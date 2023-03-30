@@ -1,0 +1,18 @@
+h3,
+.description,
+.discount,
+.price,
+.rating,
+.category {
+    margin-left: 10px;
+}
+
+.stock {
+    margin-left: 25px;
+}
+
+.container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}

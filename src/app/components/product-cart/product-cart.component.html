@@ -1,29 +1,18 @@
 <div class="container">
-  <div class="row mt-4">
-    <div class="col-md-3">
-      <!-- <div *ngFor="let data of productArray">
-                <a><img src="{{data.thumbnail}}" alt="" width="20%" height="25%"></a><br>
-                {{data.description}} <br>
-                {{data.rating}}&nbsp;&nbsp;&nbsp;({{data.stock}}) <br>
-                {{data.price | currency}}&nbsp;&nbsp;&nbsp;
-                {{data.discountPercentage}} % <br>
-              </div> -->
-
-      <!-- <div *ngFor="let data of productArray">
-                <a><img src="{{data.thumbnail}}" alt="" width="20%" height="25%"></a><br>
-                {{data.description}} <br>
-                {{data.rating}}&nbsp;&nbsp;&nbsp;({{data.stock}}) <br>
-                {{data.price | currency}}&nbsp;&nbsp;&nbsp;
-                {{data.discountPercentage}} % <br>
-              </div>-->
-
-      <div *ngFor="let data of productArray">
-        <a><img src="{{data.thumbnail}}" alt="" width="20%" height="25%"></a><br>
-        {{data.description}} <br>
-        {{data.rating}}&nbsp;&nbsp;&nbsp;({{data.stock}}) <br>
-        {{data.price | currency}}&nbsp;&nbsp;&nbsp;
-        {{data.discountPercentage}} % <br>
-      </div>
-    </div>
+  <div *ngFor="let data of productArray, index as i">
+    <p-card [style]="{ width: '320px',height:'570px' }">
+      <ng-template pTemplate="header">
+        <h3>{{data.brand}}</h3>
+        <a><img src="{{data.thumbnail}}" alt="" width="200px" height="200px"></a><br>
+      </ng-template>
+      <p class="description"><b>Description : </b>{{data.description}}</p>
+      <p class="rating"> <b>Rating : </b>{{data.rating}}
+        <span class="stock"><b>Stock : </b>({{data.stock}})</span>
+      </p>
+      <p class="price"><b>Price : </b> {{data.price | currency}}
+        <span class="discount"><b>Discount : </b>{{data.discountPercentage}} % </span>
+      </p>
+      <span class="category"><b>Category : </b>{{data.category}} </span>
+      <p class="brand"><b>Brand : </b>{{data.brand}} </p>
+    </p-card>
   </div>
-</div>

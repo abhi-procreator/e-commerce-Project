@@ -1,15 +1,22 @@
-<button routerLink="/productCart">Go to Cart</button>
+<p-button class="p-buttonsm" styleClass="p-button-sm" routerLink="/productCart">Go to Cart</p-button>
 <br>
 <br>
+
 <div class="container">
-  <div class="row mt-4">
-    <div class="col-md-3">
-      <img src={{product.thumbnail}} alt="" width="20%" height="25%"><br>
-      {{product.description}} <br>
-      {{product.rating}}&nbsp;&nbsp;&nbsp;({{product.stock}}) <br>
-      {{product.price | currency}}&nbsp;&nbsp;&nbsp;
-      {{product.discountPercentage}} % <br>
-      <button (click)="addtoCart()">{{isProductAdded ? 'Remove from cart':'Add to Cart'}}</button>
-    </div>
-  </div>
+  <p-card [style]="{ width: '320px' ,height:'540px'}">
+    <ng-template pTemplate="header">
+      <h3>{{product.brand}}</h3>
+      <a><img src="{{product.thumbnail}}" alt="" width="200px" height="180px"></a><br>
+      <p class="description"><b>Description : </b>{{product.description}}</p>
+      <p class="rating"><b>Rating : </b>{{product.rating}}&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="stock"><b>Stock : </b>({{product.stock}})</span>
+      </p>
+      <span class="price"><b>Price : </b> {{product.price | currency}}</span>
+      <span class="discount"><b>Discount : </b>{{product.discountPercentage}} % </span>
+      <p class="category"><b>Category : </b>{{product.category}} </p> 
+            <p class="brand"><b>Brand : </b>{{product.brand}} </p>
+      <p-button class="p-button" styleClass="p-button-sm" (click)="addtoCart()">{{isProductAdded ? 'Remove
+        from cart':'Add to Cart'}}</p-button>
+    </ng-template>
+  </p-card>
 </div>
