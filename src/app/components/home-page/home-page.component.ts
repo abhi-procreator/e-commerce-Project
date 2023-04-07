@@ -12,7 +12,6 @@ import { ProductsService } from 'src/app/service/products.service';
 export class HomePageComponent implements OnInit {
 
   productArray: Products[] = [];
-  cartCount: number = 0;
   isAddedToCart: boolean = false;
   constructor(private serviceProduct: ProductsService, private router: Router) { }
 
@@ -27,8 +26,10 @@ export class HomePageComponent implements OnInit {
   imageCart(index:number) {
     this.serviceProduct.productSubject.next(this.productArray[index]);
     this.router.navigate(['productDetails'])
-    console.log(this.productArray[index]);
+   // console.log(this.productArray[index]);
     
   }
 
 }
+
+

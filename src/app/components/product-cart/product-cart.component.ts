@@ -12,8 +12,7 @@ export class ProductCartComponent implements OnInit {
   constructor(private serviceProduct: ProductsService) { }
 
   ngOnInit(): void {
-
-
+    
     this.productArray = this.serviceProduct.productArray;
 
 

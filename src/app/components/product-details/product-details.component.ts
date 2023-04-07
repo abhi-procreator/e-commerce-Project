@@ -22,8 +22,6 @@ export class ProductDetailsComponent implements OnInit {
           this.isProductAdded = true;
         }
       });
-      // console.log(data);
-      // console.log(this.product);
     });
 
   }
@@ -32,16 +30,11 @@ export class ProductDetailsComponent implements OnInit {
     if (this.isProductAdded) {
 
       var index = this.serviceProduct.productArray.indexOf(this.product);
-      console.log(index);
-      console.log(this.serviceProduct.productArray);
-      
-      let list = this.serviceProduct.productArray.filter((p)=> p.id != this.product.id);
+      let list = this.serviceProduct.productArray.filter((p) => p.id != this.product.id);
       this.serviceProduct.productArray = list;
-      console.log(list);
       this.isProductAdded = false;
 
     } else {
-
       this.serviceProduct.productArray.push(this.product);
       this.isProductAdded = true;
 
